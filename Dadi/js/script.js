@@ -22,6 +22,7 @@ elButton.addEventListener('click', function () {
     let sum = parseInt(userNumber.value) + pcnumber;
     console.log(sum);
     let userChoiceV = userChoice.value;
+    result = '';
 
 
     if ((sum % 2 === 0 && userChoiceV === 'even') || (sum % 2 !== 0 && userChoiceV === 'odd')) {
@@ -30,9 +31,13 @@ elButton.addEventListener('click', function () {
     } else {
         result = sum + ' Hai perso';
         console.log('Hai perso!');
-    }});
+    }
+  
+          document.getElementById('result').innerHTML = result;
+  
+    });
 
-    document.getElementById('result').innerHTML = result;
+  
 
 
 
