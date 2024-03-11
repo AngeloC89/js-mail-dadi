@@ -1,8 +1,7 @@
 //Creo delle variabili per ottenere dall'utente delle scelte
 
 let userChoice = document.getElementById('userchoice');
-let userNumber = document.getElementById('numberchoice');
-console.log(userchoice, userNumber);
+
 
 //inserisco la funzione random che genera numeri a caso.
 function getRndInteger(min, max) {
@@ -19,11 +18,18 @@ let elButton = document.querySelector('.btn-primary');
 elButton.addEventListener('click', function () {
     let pcnumber = getRndInteger(1, 6);
     console.log(pcnumber);
-    let sum = parseInt(userNumber.value) + pcnumber;
+    let userNumber = getRndInteger(1, 6);
+    console.log(userNumber);
+    let sum = userNumber + pcnumber;
     console.log(sum);
     let userChoiceV = userChoice.value;
     result = '';
 
+    if (userChoiceV === '') {
+        // Mostra un messaggio all'utente
+        document.getElementById('result').innerHTML = 'Effettua una scelta tra pari e dispari.';
+        return; // Esce dalla funzione
+      }
 
     if ((sum % 2 === 0 && userChoiceV === 'even') || (sum % 2 !== 0 && userChoiceV === 'odd')) {
         result = sum + ' Hai vinto';
