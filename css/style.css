@@ -4,13 +4,29 @@
     box-sizing: border-box;
 }
 body{
-    background-color: antiquewhite;
+    background-color: rgb(241, 241, 160);
+}
+#game {
+    background-color: blue;
+
 }
 
-#box{
-    background-color: rgb(0, 179, 255);
-    padding: 20px;
-    border: 3px solid blue;
-    border-radius: 20px;
-    width: 30%;
+#mail {
+    background-color: red;
+}
+
+#mail,
+#game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    margin: 100px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    
 }
