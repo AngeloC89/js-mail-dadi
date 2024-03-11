@@ -7,6 +7,21 @@ let library = [
     'moanapozzi-223@libero.it'
 ];
 
+let trovato = false;
+
+for(let i = 0; i < library.length; i++){
+    if(userMail.value === library[i]){
+        trovato = true;
+    }
+
+}
+
+if(trovato){
+    console.log('si trovato')
+}
+else {
+    console.log('no non trovato')
+};
 
 
 

@@ -25,10 +25,14 @@ elButton.addEventListener('click', function () {
 
 
     if ((sum % 2 === 0 && userChoiceV === 'even') || (sum % 2 !== 0 && userChoiceV === 'odd')) {
+        result = sum + ' Hai vinto';
         console.log('Hai vinto!');
     } else {
+        result = sum + ' Hai perso';
         console.log('Hai perso!');
     }});
+
+    document.getElementById('result').innerHTML = result;
 
 
 
