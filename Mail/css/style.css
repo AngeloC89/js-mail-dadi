@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(241, 241, 160);
+}
+#game {
+    background-color: blue;
+
+}
+
+#mail {
+    background-color: red;
+}
+
+#mail,
+#game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    margin: 100px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    
+}
