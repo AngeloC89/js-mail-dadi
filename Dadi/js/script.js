@@ -46,7 +46,7 @@ elButton.addEventListener('click', function () {
         <img src="./dadi/${pcnumber}.svg" alt="${pcnumber}" class="img-fluid ">
         `
         userDice.innerHTML = `
-        <img src="./dadi/${userNumber}.svg" alt="${userNumber}" class="img-fluid ">
+        <img src="./dadi/${userNumber}.svg" alt="${userNumber}" class="img-fluid  ">
         `
 
     } else {
