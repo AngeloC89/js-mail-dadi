@@ -15,27 +15,41 @@
   <!-- title -->
   <h1 class="text-center display-1 fw-bold ">Lancia i Dadi</h1>
   <!-- box of the game -->
-  <div id="box" class="container">
-    <!-- select your choice even || odd -->
-    <div class="m-3">
-      <label for="userchoice" class="form-label">Fai una scelta</label>
-      <select id="userchoice" class="form-select" aria-label="Default select example">
-        <option value="" selected>Effettua una scelta tra pari e dispari......</option>
-        <option value="even">Pari</option>
-        <option value="odd">Dispari</option>
-      </select>
-    </div>
+  <div id="box" class="container d-flex justify-content-center ">
 
-    <!-- write a number -->
-    
     <button class="btn btn-primary">PlayGame</button>
   </div>
 
-  <div id="result" class="container d-flex">
-    <div id="resultpc"></div>
-    <div id="resultuser"></div>
-   
-  </div>
+  
+    <div class="result container  debug">
+      <div id="dips" class="d-flex ">
+        <div id="resultpc">Computer
+
+        </div>
+        <div id="resultuser">Human</div>
+      </div>
+      
+       
+
+        <div id="display" class="d-flex debug">
+ <div id="computer">
+          
+        </div>
+        <div id="human">
+          
+        </div>
+
+        </div>
+    </div>
+
+    <div id="win"></div>
+      
+    
+
+
+
+
+
 
 
 

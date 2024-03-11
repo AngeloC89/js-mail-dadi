@@ -1,6 +1,6 @@
-//Creo delle variabili per ottenere dall'utente delle scelte
 
-let userChoice = document.getElementById('userchoice');
+
+
 
 
 //inserisco la funzione random che genera numeri a caso.
@@ -14,6 +14,12 @@ function getRndInteger(min, max) {
 let elButton = document.querySelector('.btn-primary');
 
 
+
+
+// <img src="./dadi/1.svg" alt="1" class="img-fluid ">
+
+
+
 //dico al bottone quello che deve fare non appena lo clikkiamo
 elButton.addEventListener('click', function () {
     let pcnumber = getRndInteger(1, 6);
@@ -22,28 +28,48 @@ elButton.addEventListener('click', function () {
     console.log(userNumber);
     let sum = userNumber + pcnumber;
     console.log(sum);
-    let userChoiceV = userChoice.value;
-    result = '';
-
-    if (userChoiceV === '') {
-        // Mostra un messaggio all'utente
-        document.getElementById('result').innerHTML = 'Effettua una scelta tra pari e dispari.';
-        return; // Esce dalla funzione
-      }
-
-    if ((sum % 2 === 0 && userChoiceV === 'even') || (sum % 2 !== 0 && userChoiceV === 'odd')) {
-        result = sum + ' Hai vinto';
-        console.log('Hai vinto!');
-    } else {
-        result = sum + ' Hai perso';
-        console.log('Hai perso!');
+    let win = document.getElementById('win');
+    let userDice = document.getElementById('human');
+    let pcDice = document.getElementById('computer');
+    if(pcnumber === userNumber){
+        win.innerHTML = ' Pareggio';
+        pcDice.innerHTML = `
+        <img src="./dadi/${pcnumber}.svg" alt="${pcnumber}" class="img-fluid ">
+        `
+        userDice.innerHTML = `
+        <img src="./dadi/${userNumber}.svg" alt="${userNumber}" class="img-fluid ">
+        `
     }
-  
-          document.getElementById('result').innerHTML = result;
-  
-    });
+    else if( pcnumber < userNumber){
+        win.innerHTML = ' Hai vinto!!!';
+        pcDice.innerHTML = `
+        <img src="./dadi/${pcnumber}.svg" alt="${pcnumber}" class="img-fluid ">
+        `
+        userDice.innerHTML = `
+        <img src="./dadi/${userNumber}.svg" alt="${userNumber}" class="img-fluid ">
+        `
 
-  
+    } else {
+        win.innerHTML = ' Hai perso!!!';
+        pcDice.innerHTML = `
+        <img src="./dadi/${pcnumber}.svg" alt="${pcnumber}" class="img-fluid ">
+        `
+        userDice.innerHTML = `
+        <img src="./dadi/${userNumber}.svg" alt="${userNumber}" class="img-fluid ">
+        `
+
+    }
+    
+
+
+
+    document.getElementById('resultpc').innerHTML = pcnumber;
+
+    document.getElementById('resultuser').innerHTML = userNumber;
+
+});
+
+
 
 
 
