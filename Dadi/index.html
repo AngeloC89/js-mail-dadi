@@ -15,26 +15,28 @@
   <!-- title -->
   <h1 class="text-center display-1 fw-bold ">Lancia i Dadi</h1>
   <!-- box of the game -->
-  <div id="box" class="container d-flex justify-content-center ">
-
-    <button class="btn btn-primary">PlayGame</button>
-  </div>
-
-
-  <div class="result d-flex justify-content-around ">
-    <div id="disp" class="">
-      <div id="resultpc">Computer
-
+  <div id="box" class="container d-flex justify-content-center flex-wrap ">
+<!-- the button play and exit -->
+    <button class="btn btn-primary m-3 ">PlayGame</button>
+    <div class="btn btn-secondary fs-4 d-none d-lg-block h-50 m-3  "><a class="text-decoration-none text-white  " href="/index.html">Exit</a></div>
+ </div>
+<div class="container d-flex justify-content-center my-3">
+  <h4 class="mx-5 d-none d-lg-block ">Pc</h4>
+  <h4 class="mx-5 d-none d-lg-block ">Human</h4>
+</div>
+  <!-- due div per stampare in numeri estratti -->
+  <div class="result d-flex justify-content-around align-items-center flex-column flex-lg-row ">
+    <div id="disp">
+      
+      <div id="resultpc" class="d-none d-lg-block  ">
       </div>
-      <div id="computer" class="">
-
+      <div id="computer">
       </div>
     </div>
-
-
-
-    <div id="display" class="">
-      <div id="resultuser">Human</div>
+    <!-- due div che contengono le img dei dadi -->
+    <div id="display">
+     
+      <div id="resultuser" class="d-none d-lg-block  "></div>
       <div id="human" class="">
 
       </div>
@@ -42,11 +44,8 @@
     </div>
 
   </div>
-
-
-  <div id="win" class=""></div>
-
-
+  <div id="win" class="fs-3"></div>
+  
 
 
 

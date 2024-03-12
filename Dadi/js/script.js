@@ -1,8 +1,4 @@
 
-
-
-
-
 //inserisco la funzione random che genera numeri a caso.
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -22,28 +18,28 @@ let elButton = document.querySelector('.btn-primary');
 
 //dico al bottone quello che deve fare non appena lo clikkiamo
 elButton.addEventListener('click', function () {
-    let pcnumber = getRndInteger(1, 6);
-    console.log(pcnumber);
+    let pcNumber = getRndInteger(1, 6);
+    console.log(pcNumber);
     let userNumber = getRndInteger(1, 6);
     console.log(userNumber);
-    let sum = userNumber + pcnumber;
+    let sum = userNumber + pcNumber;
     console.log(sum);
     let win = document.getElementById('win');
     let userDice = document.getElementById('human');
     let pcDice = document.getElementById('computer');
-    if(pcnumber === userNumber){
+    if(pcNumber === userNumber){
         win.innerHTML = ' Pareggio';
         pcDice.innerHTML = `
-        <img src="./dadi/${pcnumber}.svg" alt="${pcnumber}" class="img-fluid ">
+        <img src="./dadi/${pcNumber}.svg" alt="${pcNumber}" class="img-fluid ">
         `
         userDice.innerHTML = `
         <img src="./dadi/${userNumber}.svg" alt="${userNumber}" class="img-fluid ">
         `
     }
-    else if( pcnumber < userNumber){
+    else if( pcNumber < userNumber){
         win.innerHTML = ' Hai vinto!!!';
         pcDice.innerHTML = `
-        <img src="./dadi/${pcnumber}.svg" alt="${pcnumber}" class="img-fluid ">
+        <img src="./dadi/${pcNumber}.svg" alt="${pcNumber}" class="img-fluid ">
         `
         userDice.innerHTML = `
         <img src="./dadi/${userNumber}.svg" alt="${userNumber}" class="img-fluid  ">
@@ -52,7 +48,7 @@ elButton.addEventListener('click', function () {
     } else {
         win.innerHTML = ' Hai perso!!!';
         pcDice.innerHTML = `
-        <img src="./dadi/${pcnumber}.svg" alt="${pcnumber}" class="img-fluid ">
+        <img src="./dadi/${pcNumber}.svg" alt="${pcNumber}" class="img-fluid ">
         `
         userDice.innerHTML = `
         <img src="./dadi/${userNumber}.svg" alt="${userNumber}" class="img-fluid ">
@@ -63,7 +59,7 @@ elButton.addEventListener('click', function () {
 
 
 
-    document.getElementById('resultpc').innerHTML = pcnumber;
+    document.getElementById('resultpc').innerHTML = pcNumber;
 
     document.getElementById('resultuser').innerHTML = userNumber;
 

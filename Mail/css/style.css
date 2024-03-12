@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(241, 241, 160);
+    background-color: rgb(255, 255, 253);
 }
 div.container{
     margin-top: 100px;
+    border:5px solid green;
+    padding: 30px;
+    background-color: rgb(226, 226, 169);
 
 }
 
@@ -21,8 +24,9 @@ div.container{
     font-weight: bold;
     width: 300px;
     height: 50px;
+    background-color: rgb(230, 231, 209);
 
-    border-radius: 50px;
+   
     text-align: center;
     text-decoration: none;
     
